@@ -25,17 +25,17 @@
 }
 
 .main__container{
-    margin-top: 30px;
+    margin: 30px;
     display: flex;
     gap: 100px;
 }
-.components__list{
+.main__components{
     display: flex;
     flex-direction: column;
     gap: 34px;
     flex-wrap: wrap;
 }
-.components__item{
+.components__frame{
     width: 666px;
 }
 .components__title{
@@ -44,13 +44,33 @@
     line-height: 34px;
     color: #FF6D6D;
 }
-.components__frame{
+.components__list{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
     height: 120px;
     border: 1px solid #FF6D6D;
     border-radius: 10px;
     padding: 15px;
+    overflow: hidden;
 }
+
+
+.components__item{
+    height: 120px;
+    transition: padding 0.3s ease;
+}
+.components__item img{
+    height: 100%;
+}
+.components__item-active, .components__item:hover{
+    background-color: #e0e0e0;
+    padding:10px;
+}
+
+
 
 .main__model{
     width: 100%;
@@ -64,8 +84,7 @@
     flex-direction: column;
     gap: 10px;
     padding: 20px;
-    height: 200px;
-    width: 100%;
+    width: 90%;
     margin-top: 20px;
     background: #FFFFFF;
     border: 2px solid #FF6D6D;
@@ -104,6 +123,11 @@
 
 .model__image{
     position: relative;
+    width: 370px;
+}
+.model__template{
+    width: 100%;
+    opacity: 0.3;
 }
 .number{
     position: absolute;
@@ -121,4 +145,33 @@
 }
 .model__fourth{
     top: 470px;
+}
+
+
+.model__collar{
+    position: absolute;
+    top: 0;
+    left: 106px;
+    width: 159px;
+    z-index: 1;
+}
+.model__sleeve{
+    position: absolute;
+    top: 60px;
+    width: 64px;
+    z-index: 2;
+}
+.model__sleeve-left{
+    left: 0px;
+}
+.model__sleeve-right{
+    right: 0px;
+    transform: scale(-1, 1);
+}
+.model__warp{
+    position: absolute;
+    top: 30px;
+    left: 32px;
+    width: 307px;
+    z-index: 0;
 }
