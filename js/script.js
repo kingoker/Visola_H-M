@@ -1,3 +1,10 @@
+// loader на сайте
+window.addEventListener('load', function() {
+  const preloader = document.querySelector('.preloader');
+  preloader.classList.add('hide');
+});
+
+
 // Замена левого рукава
 // Получаем ссылки на все маленькие изображения
 var baseOfJacet = document.querySelectorAll(".baseOfJacet__list .components__item img");
