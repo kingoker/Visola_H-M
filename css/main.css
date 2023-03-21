@@ -91,9 +91,11 @@
 .components__item img{
     height: 100%;
 }
-.components__item-active, .components__item:hover{
-    background-color: #e0e0e0;
-    padding:10px;
+.components__item:hover{
+    opacity: 0.7;
+}
+.components__item-active{
+    opacity: 0.5;
 }
 
 
@@ -150,9 +152,10 @@
 
 .model__image{
     position: relative;
-    width: 370px;
+    width: 500px;
 }
 .model__template{
+    height: 500px;
     width: 100%;
     opacity: 0.3;
 }
@@ -160,45 +163,84 @@
     position: absolute;
     right: -70px;
     cursor: pointer;
+    z-index: 2;
 }
 .model__first{
-    top: 30px;
+    top: 50px;
 }
 .model__second{
     top: 180px;
 }
 .model__therd{
-    top: 350px;
+    top: 280px;
 }
 .model__fourth{
-    top: 470px;
+    top: 380px;
 }
+.model__first::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 2px;
+    width: 300px;
+    background-color: #FF6D6D;
+}
+.model__second::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 2px;
+    width: 170px;
+    background-color: #FF6D6D;
+}
+.model__therd::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 2px;
+    width: 270px;
+    background-color: #FF6D6D;
+}
+.model__fourth::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 2px;
+    width: 260px;
+    background-color: #FF6D6D;
+}
+
 
 
 .model__collar{
     position: absolute;
     top: 0;
-    left: 106px;
+    left: 129px;
     width: 159px;
     z-index: 1;
 }
 .model__sleeve{
     position: absolute;
-    top: 60px;
-    width: 64px;
+    top: 58px;
+    left: 0px;
+    width: 100%;
     z-index: 2;
 }
-.model__sleeve-left{
-    left: 0px;
-}
-.model__sleeve-right{
-    right: 0px;
-    transform: scale(-1, 1);
+.model__pocket{
+    position: absolute;
+    bottom: 41px;
+    left: 61px;
+    width: 292px;
+    z-index: 1;
 }
 .model__warp{
     position: absolute;
-    top: 30px;
-    left: 32px;
+    top: 34px;
+    left: 54px;
     width: 307px;
     z-index: 0;
 }
