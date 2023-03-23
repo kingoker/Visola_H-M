@@ -73,9 +73,8 @@
 }
 .components__list{
     display: flex;
-    gap: 50px;
+    gap: 30px;
     flex-wrap: wrap;
-    justify-content: space-around;
     width: 100%;
     min-height: 120px;
     border: 1px solid #FF6D6D;
@@ -85,7 +84,7 @@
 
 
 .components__item{
-    height: 120px;
+    height: 130px;
     transition: padding 0.3s ease;
 }
 .components__item img{
@@ -218,10 +217,10 @@
 
 .model__collar{
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 129px;
     width: 159px;
-    z-index: 1;
+    z-index: 2;
 }
 .model__sleeve{
     position: absolute;
